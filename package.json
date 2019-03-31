@@ -2,19 +2,26 @@
   "name": "InventoryProject",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/Nagham123/InventoryProject.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nagham123/InventoryProject.git"
+  },
   "author": "Nagham123 <nagham.ramadan1991@gmail.com>",
   "license": "MIT",
-
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "back": "cd back && yarn start",
-    "front": "cd front && yarn start",
-    "start": "concurrently --kill-others-on-fail --names \"back,front\" \"yarn run back\" \"yarn run front\"",
-    "postinstall":"cd front && yarn install && cd .. && cd back && yarn install"
- 
+    "back": "cd back && npm start",
+    "front": "cd front && npm start",
+    "start": "concurrently --kill-others-on-fail --names \"back,front\" \"npm run back\" \"npm run front\"",
+    "postinstall":"cd front && npm install && cd .. && cd back && npm install"
+  },
+  "description": "",
+  "bugs": {
+    "url": "https://github.com/Nagham123/InventoryProject/issues"
+  },
+  "homepage": "https://github.com/Nagham123/InventoryProject#readme",
+  "keywords": [],
+  "dependencies": {
+    "concurrently": "^4.1.0"
   }
-
-
-
 }
